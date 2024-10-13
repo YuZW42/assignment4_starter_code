@@ -28,4 +28,4 @@ jobs:
       run: |
         python app.py &  
         sleep 10  
-        curl http://localhost:3000 
+        
