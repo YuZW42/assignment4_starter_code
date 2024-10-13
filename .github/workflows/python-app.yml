@@ -23,9 +23,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        make install
+        python -m venv venv  
+        . venv/bin/activate && pip install -r requirements.txt  
     - name: Run application
       run: |
-        make run &
-        sleep 10 
+        . venv/bin/activate && make run & 
+        sleep 10  # Sleep for 10 seconds to ensure the server starts up
         curl http://localhost:3000  
