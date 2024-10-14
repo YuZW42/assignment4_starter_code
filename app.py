@@ -50,4 +50,4 @@ def search():
     return jsonify({'documents': documents, 'similarities': similarities, 'indices': indices}) 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,  port = 3000)
